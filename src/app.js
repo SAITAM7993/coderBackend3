@@ -20,7 +20,7 @@ app.use('/api/pets', petsRouter);
 app.use('/api/adoptions', adoptionsRouter);
 app.use('/api/sessions', sessionsRouter);
 
-// Middleware de manejo de errores
+// Middleware para manejo de errores, los endpoints atrapan los errores y lo derivan al errorhandle
 app.use(errorHandle);
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
