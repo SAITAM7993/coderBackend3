@@ -20,6 +20,12 @@ export class UserServices {
     const user = await this.userDao.save(data);
     return user;
   }
+
+  async createMany(data) {
+    const users = await this.userDao.saveMany(data);
+    return users;
+  }
+
   async update(id, data) {
     const user = await this.userDao.update(id, data);
     return user;
@@ -28,9 +34,9 @@ export class UserServices {
     await this.userDao.delete(id);
     return 'ok';
   }
-  async createMocks(qty) {
-    const users = generateUsersMock(qty);
-    const usersDb = await this.userDao.saveMany(users);
-    return usersDb;
-  }
+  // async createMocks(qty) {
+  //   const users = generateUsersMock(qty);
+  //   const usersDb = await this.userDao.saveMany(users);
+  //   return usersDb;
+  // }
 }

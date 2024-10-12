@@ -1,11 +1,12 @@
+//ERRORES CUSTOMIZADOS
 export class CustomError {
-  notFoundError(message = "Not found") {
+  notFoundError(message = 'Not found') {
     const error = new Error(message);
     error.status = 404;
     return error;
   }
 
-  unauthorizedError(message = "Unauthorized") {
+  unauthorizedError(message = 'Unauthorized') {
     const error = new Error(message);
     error.status = 401;
     return error;

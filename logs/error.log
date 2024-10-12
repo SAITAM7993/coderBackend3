@@ -1,0 +1,21 @@
+
+2024-10-12 15:53:43 [[31merror[39m]: [GET] api/mocks/mockingpets | specie is not defined
+2024-10-12 15:54:50 [[31merror[39m]: [GET] api/mocks/mockingusers | Users validation failed: password: Path `password` is required., email: Path `email` is required., last_name: Path `last_name` is required., first_name: Path `first_name` is required.
+2024-10-12 15:55:25 [[31merror[39m]: [GET] api/mocks/mockingpets | specie is not defined
+2024-10-12 15:55:53 [[31merror[39m]: [GET] api/mocks/mockingpets | specie is not defined
+2024-10-12 15:56:52 [[31merror[39m]: [GET] api/mocks/mockingpets | specie is not defined
+2024-10-12 15:59:46 [[31merror[39m]: [GET] api/mocks/mockingpets | specie is not defined
+2024-10-12 16:00:45 [[31merror[39m]: [GET] api/mocks/mockingpets | specie is not defined
+2024-10-12 16:01:22 [[31merror[39m]: [GET] api/mocks/mockingpets | specie is not defined
+2024-10-12 16:01:25 [[31merror[39m]: [GET] api/mocks/mockingpets | specie is not defined
+2024-10-12 16:02:00 [[31merror[39m]: [GET] api/mocks/mockingpets | specie is not defined
+2024-10-12 16:02:02 [[31merror[39m]: [GET] api/mocks/mockingpets | specie is not defined
+2024-10-12 16:02:44 [[31merror[39m]: [GET] api/mocks/mockingpets | specie is not defined
+2024-10-12 16:03:03 [[31merror[39m]: [GET] api/mocks/mockingpets | specie is not defined
+2024-10-12 16:03:05 [[31merror[39m]: [GET] api/mocks/mockingpets | specie is not defined
+2024-10-12 16:03:36 [[31merror[39m]: [GET] api/mocks/mockingpets | specie is not defined
+2024-10-12 16:03:38 [[31merror[39m]: [GET] api/mocks/mockingpets | specie is not defined
+2024-10-12 16:03:51 [[31merror[39m]: [GET] api/mocks/mockingpets | specie is not defined
+2024-10-12 16:03:52 [[31merror[39m]: [GET] api/mocks/mockingpets | specie is not defined
+2024-10-12 16:03:53 [[31merror[39m]: [GET] api/mocks/mockingpets | specie is not defined
+2024-10-12 16:11:10 [[31merror[39m]: [GET] api/mocks/mockingusers | Users validation failed: password: Path `password` is required., email: Path `email` is required., last_name: Path `last_name` is required., first_name: Path `first_name` is required.
