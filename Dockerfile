@@ -9,8 +9,16 @@ COPY package.json .
 
 # Instalamos las dependencias del proyecto
 RUN npm install
+RUN npm install bcryptjs 
+# RUN npm install dotenv
+# RUN npm install winston
+# RUN npm install cookieparser
+# RUN npm install express
+# RUN npm install jsonwebtoken
+# RUN npm install mongoose
+# RUN npm install multer
+# RUN npm install supertest con el npm install ya se instalaria todo, bcrypt daba un problema
 
-RUN npm install bcryptjs
 # Copiamos el resto de los archivos a la carpeta de trabajo
 COPY . .
 
@@ -27,3 +35,4 @@ CMD ["npm", "start"]
 # Una vez que la imagen se haya construido, podemos correr un contenedor a partir de ella
 # Para esto, debemos ejecutar el siguiente comando en la terminal:
 # docker run -p 8080:8080 nombre-de-la-imagen (reemplazar nombre-de-la-imagen por el nombre que le diste a tu imagen)
+# docker run -p 8080:8080 app-adoption 
