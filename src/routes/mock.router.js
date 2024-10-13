@@ -23,7 +23,7 @@ router.get('/mockingpets', async (req, res, next) => {
 //GENERA 50 USUARIOS, para hacerlo mas sencillo se hace todo en esta parte, genera 50 usuarios
 router.get('/mockingusers', async (req, res, next) => {
   try {
-    const users = generateUsersMock(50);
+    const users = await generateUsersMock(50);
     const response = await userServices.createMany(users);
 
     res.status(201).json({ status: 'ok', payload: response });

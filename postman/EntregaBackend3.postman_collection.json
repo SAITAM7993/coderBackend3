@@ -1,0 +1,34 @@
+{
+	"info": {
+		"_postman_id": "6d67bf9c-11b8-4474-86b9-80165f8e98e6",
+		"name": "EntregaBackend3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30169288"
+	},
+	"item": [
+		{
+			"name": "generatePetsMock",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "generateUsersMock",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

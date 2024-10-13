@@ -19,3 +19,4 @@
 2024-10-12 16:03:52 [[31merror[39m]: [GET] api/mocks/mockingpets | specie is not defined
 2024-10-12 16:03:53 [[31merror[39m]: [GET] api/mocks/mockingpets | specie is not defined
 2024-10-12 16:11:10 [[31merror[39m]: [GET] api/mocks/mockingusers | Users validation failed: password: Path `password` is required., email: Path `email` is required., last_name: Path `last_name` is required., first_name: Path `first_name` is required.
+2024-10-13 10:51:17 [error]: [GET] api/mocks/mockingusers | Users validation failed: password: Path `password` is required., email: Path `email` is required., last_name: Path `last_name` is required., first_name: Path `first_name` is required.
