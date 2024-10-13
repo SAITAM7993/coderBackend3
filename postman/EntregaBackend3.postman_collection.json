@@ -10,7 +10,20 @@
 			"name": "generatePetsMock",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/mocks/mockingpets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mocks",
+						"mockingpets"
+					]
+				}
 			},
 			"response": []
 		},
@@ -18,7 +31,20 @@
 			"name": "generateUsersMock",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/mocks/mockingusers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mocks",
+						"mockingusers"
+					]
+				}
 			},
 			"response": []
 		},
@@ -26,7 +52,22 @@
 			"name": "New Request",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/mocks/generateData/1/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mocks",
+						"generateData",
+						"1",
+						"2"
+					]
+				}
 			},
 			"response": []
 		}
