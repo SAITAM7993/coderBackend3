@@ -1,0 +1,33 @@
+paths:
+  /api/adoptions/{uid}/{pid}:
+    post:
+      summary: Crear una adopción
+      description: Create an adoption
+      tags:
+        - Adoptions
+      parameters:
+        - in: path
+          name: uid
+          required: true
+          description: user id
+          schema:
+            type: string
+        - in: path
+          name: pid
+          required: true
+          description: pet id
+          schema:
+            type: string
+      responses:
+        201:
+          description: Adoption created
+        404:
+          description: User / Pet not found
+        400:
+          description: Pet already adopted
+        500:
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Adoptions'

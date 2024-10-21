@@ -1,0 +1,30 @@
+paths:
+  /api/users/{uid}:
+    put:
+      summary: Actualizar usuario
+      description: Update a user
+      tags:
+        - Users
+      parameters:
+        - in: path
+          name: uid
+          required: true
+          description: Id del usuario
+          schema:
+            type: string
+      requestBody:
+        required: true
+        description: User data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBody/userBody'
+      responses:
+        200:
+          description: User updated
+        500:
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Users'

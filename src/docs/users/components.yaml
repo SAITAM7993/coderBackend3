@@ -1,0 +1,78 @@
+components:
+  schemas:
+    Users:
+      properties:
+        _id:
+          type: ObjectId
+          description: Id del usuario
+        first_name:
+          type: string
+          description: Primer nombre del usuario
+        last_name:
+          type: string
+          description: Apellido del usuario
+        email:
+          type: string
+          format: email
+          description: Correo electrónico del usuario
+        password:
+          type: string
+          description: Contraseña del usuario
+        role:
+          type: string
+          description: Rol del usuario (por defecto user)
+        pets:
+          type: array
+          item:
+            type: object
+            properties:
+              _id:
+                type: ObjectId
+                format: uuid
+                description: Id de la mascota asociada al usuario
+
+      example:
+        _id: 5f7e9f9b5f7e9f9b5f7e9f9b
+        first_name: John
+        last_name: Constantine
+        email: jconstantine@example.com
+        password: password123
+        role: user
+        pets:
+          - _id: 5f7e9f9b5f7e9f9b5f7e9f9b
+        __v: 2
+
+  requestBody:
+    userBody:
+      required: true
+      type: object
+      properties:
+        first_name:
+          type: string
+          description: Primer nombre del usuario
+        last_name:
+          type: string
+          description: Apellido del usuario
+        email:
+          type: string
+          format: email
+          description: Correo electrónico del usuario
+        password:
+          type: string
+          description: Contraseña del usuario
+        role:
+          type: string
+          description: Rol del usuario (opcional, por defecto user, PUEDE SER ADMIN)
+        pets:
+          type: array
+          items:
+            type: string
+            format: uuid
+            description: Lista de ids de mascotas (opcional)
+      example:
+        first_name: John
+        last_name: Constantine
+        email: jconstantine@example.com
+        password: password123
+        role: user
+        pets: [{ _id: 5f7e9f9b5f7e9f9b5f7e9f9b }]

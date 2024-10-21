@@ -1,0 +1,16 @@
+paths:
+  /api/users:
+    get:
+      summary: Obtener todas los usuarios
+      description: Get all users
+      tags:
+        - Users
+      responses:
+        200:
+          description: Retorna un array de usuarios
+        500:
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Users'

@@ -83,3 +83,136 @@
 2024-10-13 10:49:42 [info]: Listening on 8080
 2024-10-13 10:51:17 [error]: [GET] api/mocks/mockingusers | Users validation failed: password: Path `password` is required., email: Path `email` is required., last_name: Path `last_name` is required., first_name: Path `first_name` is required.
 2024-10-13 11:10:13 [info]: Listening on 8080
+2024-10-16 09:49:58 [info]: Listening on 8080
+2024-10-16 09:49:59 [info]: Listening on 8080
+2024-10-16 09:57:11 [info]: Listening on 8080
+2024-10-16 09:57:13 [info]: Listening on 8080
+2024-10-16 10:12:18 [info]: Listening on 8080
+2024-10-16 10:12:44 [info]: Listening on 8080
+2024-10-21 10:56:18 [info]: Listening on 8080
+2024-10-21 10:56:19 [info]: Listening on 8080
+2024-10-21 10:57:16 [info]: Listening on 8080
+2024-10-21 11:02:30 [info]: Listening on 8080
+2024-10-21 11:02:31 [info]: Listening on 8080
+2024-10-21 11:09:09 [info]: Listening on 8080
+2024-10-21 11:28:26 [info]: Listening on 8080
+2024-10-21 11:28:47 [info]: Listening on 8080
+2024-10-21 11:28:59 [info]: Listening on 8080
+2024-10-21 11:34:18 [info]: Listening on 8080
+2024-10-21 11:35:58 [info]: Listening on 8080
+2024-10-21 11:40:12 [error]: [PUT] api/users/:uid (users.controller/updateUser)  | Cast to ObjectId failed for value "{pid}" (type string) at path "_id" for model "Users"
+2024-10-21 11:40:42 [error]: undefined | Expected ',' or '}' after property value in JSON at position 12
+2024-10-21 11:41:01 [error]: undefined | Expected ',' or '}' after property value in JSON at position 12
+2024-10-21 11:44:55 [info]: Listening on 8080
+2024-10-21 11:45:46 [error]: [PUT] api/users/:uid (users.controller/updateUser)  | Cast to ObjectId failed for value "{pid}" (type string) at path "_id" for model "Users"
+2024-10-21 11:50:49 [info]: Listening on 8080
+2024-10-21 11:51:16 [info]: Listening on 8080
+2024-10-21 11:53:42 [error]: [PUT] api/users/:uid (users.controller/updateUser)  | Cast to ObjectId failed for value "{pid}" (type string) at path "_id" for model "Users"
+2024-10-21 11:58:20 [info]: Listening on 8080
+2024-10-21 11:58:21 [info]: Listening on 8080
+2024-10-21 12:03:18 [info]: Listening on 8080
+2024-10-21 12:03:20 [info]: Listening on 8080
+2024-10-21 12:04:28 [info]: Listening on 8080
+2024-10-21 12:04:30 [info]: Listening on 8080
+2024-10-21 12:07:04 [info]: Listening on 8080
+2024-10-21 12:09:09 [info]: Listening on 8080
+2024-10-21 12:09:13 [error]: [PUT] api/users/:uid (users.controller/updateUser)  | first_name is not defined
+2024-10-21 12:09:32 [info]: Listening on 8080
+2024-10-21 12:09:33 [error]: [PUT] api/users/:uid (users.controller/updateUser)  | UserDTO.getPetInputFrom is not a function
+2024-10-21 12:10:03 [info]: Listening on 8080
+2024-10-21 12:10:04 [error]: [PUT] api/users/:uid (users.controller/updateUser)  | Assignment to constant variable.
+2024-10-21 12:10:58 [info]: Listening on 8080
+2024-10-21 12:11:06 [info]: Listening on 8080
+2024-10-21 12:11:39 [info]: Listening on 8080
+2024-10-21 12:13:14 [error]: [POST] api/users/ (users.controller/createUser) | UserDTO.getPetInputFrom is not a function
+2024-10-21 12:13:32 [info]: Listening on 8080
+2024-10-21 12:14:31 [error]: [POST] api/users/ (users.controller/createUser) | user is not defined
+2024-10-21 12:17:00 [info]: Listening on 8080
+2024-10-21 13:24:36 [info]: Listening on 8080
+2024-10-21 13:24:37 [info]: Listening on 8080
+2024-10-21 13:26:11 [info]: Listening on 8080
+2024-10-21 13:31:36 [info]: Listening on 8080
+2024-10-21 13:31:43 [info]: Listening on 8080
+2024-10-21 13:40:36 [info]: Listening on 8080
+2024-10-21 13:40:41 [error]: [POST] api/users/ (users.controller/createUser) | Users validation failed: password: Cast to string failed for value "Promise { <pending> }" (type Promise) at path "password"
+2024-10-21 13:41:58 [info]: Listening on 8080
+2024-10-21 13:42:00 [error]: [POST] api/users/ (users.controller/createUser) | E11000 duplicate key error collection: entrega3.users index: email_1 dup key: { email: "mprueba@nearbpo.com" }
+2024-10-21 13:42:55 [info]: Listening on 8080
+2024-10-21 13:43:11 [info]: Listening on 8080
+2024-10-21 13:44:46 [info]: Listening on 8080
+2024-10-21 13:46:05 [info]: Listening on 8080
+2024-10-21 13:46:19 [info]: Listening on 8080
+2024-10-21 13:47:58 [info]: Listening on 8080
+2024-10-21 13:48:51 [info]: Listening on 8080
+2024-10-21 13:50:09 [info]: Listening on 8080
+2024-10-21 13:50:27 [info]: Listening on 8080
+2024-10-21 13:51:02 [info]: Listening on 8080
+2024-10-21 13:52:52 [info]: Listening on 8080
+2024-10-21 13:53:20 [info]: Listening on 8080
+2024-10-21 13:53:41 [info]: Listening on 8080
+2024-10-21 13:54:21 [info]: Listening on 8080
+2024-10-21 13:57:42 [info]: Listening on 8080
+2024-10-21 13:59:17 [info]: Listening on 8080
+2024-10-21 13:59:41 [info]: Listening on 8080
+2024-10-21 14:04:03 [info]: Listening on 8080
+2024-10-21 14:06:02 [info]: Listening on 8080
+2024-10-21 14:06:23 [info]: Listening on 8080
+2024-10-21 14:06:32 [info]: Listening on 8080
+2024-10-21 14:07:04 [info]: Listening on 8080
+2024-10-21 14:09:22 [info]: Listening on 8080
+2024-10-21 14:10:13 [error]: [POST] api/users/ (users.controller/createUser) | E11000 duplicate key error collection: entrega3.users index: email_1 dup key: { email: "jconstantine@example.com" }
+2024-10-21 14:10:20 [info]: Listening on 8080
+2024-10-21 14:10:32 [info]: Listening on 8080
+2024-10-21 14:24:41 [info]: Listening on 8080
+2024-10-21 14:24:42 [info]: Listening on 8080
+2024-10-21 14:26:50 [info]: Listening on 8080
+2024-10-21 14:28:44 [info]: Listening on 8080
+2024-10-21 14:29:37 [info]: Listening on 8080
+2024-10-21 14:29:47 [error]: [POST] api/users/:uid (users.controller/getUser) | User id 5f7e9f9b5f7e9f9b5f7e9f9b not found
+2024-10-21 14:30:30 [info]: Listening on 8080
+2024-10-21 14:30:37 [error]: [POST] api/users/:uid (users.controller/getUser) | User id 5f7e9f9b5f7e9f9b5f7e9f9b not found
+2024-10-21 14:35:33 [info]: Listening on 8080
+2024-10-21 14:37:54 [info]: Listening on 8080
+2024-10-21 14:40:02 [error]: [POST] api/adoptions/:uid/:pid (adoptions.controller/createAdoption) | usersService is not defined
+2024-10-21 14:42:36 [info]: Listening on 8080
+2024-10-21 14:42:38 [error]: [POST] api/adoptions/:uid/:pid (adoptions.controller/createAdoption) | UserServices.getUserById is not a function
+2024-10-21 14:43:36 [info]: Listening on 8080
+2024-10-21 14:43:38 [error]: [POST] api/adoptions/:uid/:pid (adoptions.controller/createAdoption) | UserServices.getById is not a function
+2024-10-21 14:43:54 [info]: Listening on 8080
+2024-10-21 14:43:57 [error]: [POST] api/adoptions/:uid/:pid (adoptions.controller/createAdoption) | UserServices.getById is not a function
+2024-10-21 14:44:37 [info]: Listening on 8080
+2024-10-21 14:44:40 [error]: [POST] api/adoptions/:uid/:pid (adoptions.controller/createAdoption) | UserServices.getById is not a function
+2024-10-21 14:47:35 [info]: Listening on 8080
+2024-10-21 14:47:39 [error]: [POST] api/adoptions/:uid/:pid (adoptions.controller/createAdoption) | UserServices.getById is not a function
+2024-10-21 14:49:05 [info]: Listening on 8080
+2024-10-21 14:49:07 [error]: [POST] api/adoptions/:uid/:pid (adoptions.controller/createAdoption) | usersService is not defined
+2024-10-21 14:49:39 [info]: Listening on 8080
+2024-10-21 14:49:39 [error]: [POST] api/adoptions/:uid/:pid (adoptions.controller/createAdoption) | User id [object Object] not found
+2024-10-21 14:51:08 [info]: Listening on 8080
+2024-10-21 14:52:01 [error]: [POST] api/adoptions/:uid/:pid (adoptions.controller/createAdoption) | usersService is not defined
+2024-10-21 14:54:46 [info]: Listening on 8080
+2024-10-21 14:58:21 [info]: Listening on 8080
+2024-10-21 15:02:46 [info]: Listening on 8080
+2024-10-21 15:04:17 [info]: Listening on 8080
+2024-10-21 15:07:15 [info]: Listening on 8080
+2024-10-21 15:07:59 [info]: Listening on 8080
+2024-10-21 15:08:33 [info]: Listening on 8080
+2024-10-21 15:08:47 [info]: Listening on 8080
+2024-10-21 15:10:19 [info]: Listening on 8080
+2024-10-21 15:11:42 [info]: Listening on 8080
+2024-10-21 15:12:34 [info]: Listening on 8080
+2024-10-21 15:13:36 [info]: Listening on 8080
+2024-10-21 15:14:20 [info]: Listening on 8080
+2024-10-21 15:18:17 [info]: Listening on 8080
+2024-10-21 15:18:37 [error]: [GET] api/adoptions/:aid (adoptions.controller/getAdoption) | Parameter "filter" to findOne() must be an object, got "67169569068cbe728407bbe3" (type string)
+2024-10-21 15:20:42 [error]: [POST] api/users/:uid (users.controller/getUser) | User id 670bd4ccaf7b363b12578ec6 not found
+2024-10-21 15:21:22 [error]: [GET] api/adoptions/:aid (adoptions.controller/getAdoption) | Parameter "filter" to findOne() must be an object, got "67169569068cbe728407bbe3" (type string)
+2024-10-21 15:21:52 [info]: Listening on 8080
+2024-10-21 15:22:14 [info]: Listening on 8080
+2024-10-21 15:22:33 [info]: Listening on 8080
+2024-10-21 15:30:41 [info]: Listening on 8080
+2024-10-21 15:30:42 [info]: Listening on 8080
+2024-10-21 15:33:36 [info]: Listening on 8080
+2024-10-21 15:35:24 [info]: Listening on 8080
+2024-10-21 15:35:37 [info]: Listening on 8080
+2024-10-21 15:38:27 [info]: Listening on 8080

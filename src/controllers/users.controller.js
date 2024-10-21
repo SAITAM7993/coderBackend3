@@ -1,5 +1,7 @@
 // import { customError } from '../errors/custom.error.js';
 // import { generateUsersMock } from '../mocks/user.mock.js';
+import UserDTO from '../dto/uSER.dto.js';
+import { createHash } from '../utils/index.js';
 import { UserServices } from '../services/user.services.js';
 
 export class UserControllers {
@@ -28,10 +30,26 @@ export class UserControllers {
     }
   };
 
+  createUser = async (req, res, next) => {
+    const userBody = req.body;
+    try {
+      const { first_name, last_name, email, password, role } = req.body;
+      if (!first_name || !last_name || !email || !password || !role)
+        return res
+          .status(400)
+          .send({ status: 'error', error: 'Incomplete values' });
+      var user = { ...userBody, password: await createHash(password) };
+      const result = await this.userServices.create(user);
+      res.status(201).json({ status: 'success', payload: result }); //el 201 es creado correctamente
+    } catch (error) {
+      error.path = '[POST] api/users/ (users.controller/createUser)';
+      next(error);
+    }
+  };
+
   getUser = async (req, res, next) => {
     try {
       const userId = req.params.uid;
-
       const user = await this.userServices.getById(userId);
 
       res.send({ status: 'success', payload: user });

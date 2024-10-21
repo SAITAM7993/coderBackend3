@@ -1,0 +1,35 @@
+components:
+  schemas:
+    Adoptions:
+      properties:
+        _id:
+          type: ObjectId
+          description: adoption id
+        owner:
+          type: ObjectId
+          description: user id (referencia a Users)
+        pet:
+          type: string
+          description: pet id (referencia a Pets)
+      example:
+        _id: 5f7e9f9b5f7e9f9b5f7e9f9b
+        owner: 5f7e9f9b5f7e9f9b5f7e9f9b
+        pet: 5f7e9f9b5f7e9f9b5f7e9f9b
+        __v: 5
+  requestBody:
+    adoptionBody:
+      required: true
+      schema:
+        type: object
+        properties:
+          owner:
+            type: string
+            format: uuid
+            description: user id
+          pet:
+            type: string
+            format: uuid
+            description: pet id
+      example:
+        owner: 5f7e9f9b5f7e9f9b5f7e9f9b
+        pet: 5f7e9f9b5f7e9f9b5f7e9f9b

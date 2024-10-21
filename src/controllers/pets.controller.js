@@ -27,7 +27,7 @@ export class PetsController {
           .send({ status: 'error', error: 'Incomplete values' });
       const pet = PetDTO.getPetInputFrom({ name, specie, birthDate });
       const result = await this.petService.create(pet);
-      res.send({ status: 'success', payload: result });
+      res.status(201).json({ status: 'success', payload: result }); //el 201 es creado correctamente
     } catch (error) {
       error.path = '[POST] api/pets/ (pets.controller/createPet)';
       next(error);
