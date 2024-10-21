@@ -9,3 +9,10 @@ export const connectMongoDB = async () => {
     console.log(`Error: ${error}`); //simplifica el error
   }
 };
+export const disconnectMongoDB = async () => {
+  try {
+    mongoose.disconnect();
+  } catch (error) {
+    console.log(`Error: ${error}`); //simplifica el error
+  }
+};
