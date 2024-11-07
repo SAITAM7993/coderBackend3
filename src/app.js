@@ -1,5 +1,5 @@
 import express from 'express';
-// import mongoose from "mongoose";
+import mongoose from 'mongoose';
 import { connectMongoDB } from './config/mongoDB.config.js'; //para conectar a mongo parametrizado
 
 import cookieParser from 'cookie-parser';
