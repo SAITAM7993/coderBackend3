@@ -1,5 +1,5 @@
-import Adoption from "../dao/Adoption.js";
-
+import Adoption from '../dao/Adoption.js';
+import { customError } from '../errors/custom.error.js';
 export class AdoptionServices {
   constructor() {
     this.adoptionDao = new Adoption();
@@ -10,7 +10,8 @@ export class AdoptionServices {
   }
   async getById(id) {
     const adoption = await this.adoptionDao.getBy(id);
-    if (!adoption) throw customError.notFoundError(`Adoption id ${id} not found`);
+    if (!adoption)
+      throw customError.notFoundError(`Adoption id ${id} not found`);
     return adoption;
   }
 
@@ -26,6 +27,6 @@ export class AdoptionServices {
 
   async remove(id) {
     await this.adoptionDao.delete(id);
-    return "ok";
+    return 'ok';
   }
 }

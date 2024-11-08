@@ -16,6 +16,11 @@ export class UserServices {
     if (!user) throw customError.notFoundError(`User id ${id} not found`);
     return user;
   }
+
+  async getByEmail(email) {
+    return await this.userDao.getByEmail(email);
+  }
+
   async create(data) {
     const user = await this.userDao.save(data);
     return user;

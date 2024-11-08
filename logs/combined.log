@@ -224,3 +224,97 @@
 2024-11-06 19:52:16 [info]: Listening on 8080
 2024-11-06 20:17:41 [info]: Listening on 8080
 2024-11-06 20:17:42 [info]: Listening on 8080
+2024-11-08 11:52:47 [info]: Listening on 8080
+2024-11-08 11:52:48 [info]: Listening on 8080
+2024-11-08 11:55:44 [error]: [POST] api/sessions/register (sessions.controller/register) | this.userServices.getUserByEmail is not a function
+2024-11-08 11:55:44 [error]: [POST] api/sessions/login (sessions.controller/login) | this.userServices.getUserByEmail is not a function
+2024-11-08 11:57:39 [info]: Listening on 8080
+2024-11-08 11:57:45 [error]: undefined | this.userServices.getByEmail is not a function
+2024-11-08 11:57:45 [error]: undefined | this.userServices.getByEmail is not a function
+2024-11-08 11:59:31 [error]: undefined | this.userServices.getByEmail is not a function
+2024-11-08 11:59:58 [error]: [POST] api/users/ (users.controller/createUser) | E11000 duplicate key error collection: entrega3.users index: email_1 dup key: { email: "mpa@nearbpo.com" }
+2024-11-08 12:00:49 [error]: undefined | this.userServices.getByEmail is not a function
+2024-11-08 12:02:00 [info]: Listening on 8080
+2024-11-08 12:02:04 [error]: undefined | this.userDao.getByEmail is not a function
+2024-11-08 12:03:14 [info]: Listening on 8080
+2024-11-08 12:17:28 [info]: Listening on 8080
+2024-11-08 13:18:06 [info]: Listening on 8080
+2024-11-08 13:18:07 [info]: Listening on 8080
+2024-11-08 13:18:35 [info]: Listening on 8080
+2024-11-08 13:18:43 [info]: Listening on 8080
+2024-11-08 13:33:09 [info]: Listening on 8080
+2024-11-08 13:39:25 [error]: [POST] api/users/ (users.controller/createUser) | E11000 duplicate key error collection: entrega3.users index: email_1 dup key: { email: "usertestmail@gmail.com" }
+2024-11-08 13:45:45 [error]: [POST] api/users/ (users.controller/createUser) | E11000 duplicate key error collection: entrega3.users index: email_1 dup key: { email: "usertestmail@gmail.com" }
+2024-11-08 13:46:38 [error]: [POST] api/users/ (users.controller/createUser) | E11000 duplicate key error collection: entrega3.users index: email_1 dup key: { email: "usertestmail@gmail.com" }
+2024-11-08 13:46:51 [error]: [POST] api/users/ (users.controller/createUser) | E11000 duplicate key error collection: entrega3.users index: email_1 dup key: { email: "usertestmail@gmail.com" }
+2024-11-08 13:57:05 [error]: [POST] api/users/ (users.controller/createUser) | E11000 duplicate key error collection: entrega3.users index: email_1 dup key: { email: "usertestmail@gmail.com" }
+2024-11-08 13:57:51 [info]: Listening on 8080
+2024-11-08 13:57:57 [error]: [POST] api/users/ (users.controller/createUser) | E11000 duplicate key error collection: entrega3.users index: email_1 dup key: { email: "usertestmail@gmail.com" }
+2024-11-08 14:25:36 [info]: Listening on 8080
+2024-11-08 14:25:37 [info]: Listening on 8080
+2024-11-08 14:25:44 [info]: Listening on 8080
+2024-11-08 14:25:59 [info]: Listening on 8080
+2024-11-08 18:26:08 [info]: Listening on 8080
+2024-11-08 18:26:09 [info]: Listening on 8080
+2024-11-08 18:26:14 [info]: Listening on 8080
+2024-11-08 18:37:46 [info]: Listening on 8080
+2024-11-08 19:01:34 [info]: Listening on 8080
+2024-11-08 19:04:42 [info]: Listening on 8080
+2024-11-08 19:05:11 [info]: Listening on 8080
+2024-11-08 19:05:22 [info]: Listening on 8080
+2024-11-08 19:05:25 [info]: Listening on 8080
+2024-11-08 19:05:26 [info]: Listening on 8080
+2024-11-08 19:10:46 [info]: Listening on 8080
+2024-11-08 19:11:11 [info]: Listening on 8080
+2024-11-08 19:11:58 [info]: Listening on 8080
+2024-11-08 19:34:05 [info]: Listening on 8080
+2024-11-08 19:34:06 [info]: Listening on 8080
+2024-11-08 19:34:57 [info]: Listening on 8080
+2024-11-08 19:34:58 [error]: [DELETE] api/adoptions/:adoptionId (adoptions.controller/deleteAdoption) | customError is not defined
+2024-11-08 19:38:34 [info]: Listening on 8080
+2024-11-08 19:38:47 [error]: [DELETE] api/adoptions/:adoptionId (adoptions.controller/deleteAdoption) | customError is not defined
+2024-11-08 19:41:34 [error]: [GET] api/adoptions/:aid (adoptions.controller/getAdoption) | customError is not defined
+2024-11-08 19:47:33 [info]: Listening on 8080
+2024-11-08 19:49:02 [info]: Listening on 8080
+2024-11-08 19:49:09 [error]: [GET] api/adoptions/:aid (adoptions.controller/getAdoption) | customError is not defined
+2024-11-08 19:51:33 [error]: [GET] api/adoptions/:aid (adoptions.controller/getAdoption) | customError is not defined
+2024-11-08 19:51:49 [error]: [GET] api/adoptions/:aid (adoptions.controller/getAdoption) | customError is not defined
+2024-11-08 19:51:52 [error]: [GET] api/adoptions/:aid (adoptions.controller/getAdoption) | customError is not defined
+2024-11-08 19:51:54 [error]: [GET] api/adoptions/:aid (adoptions.controller/getAdoption) | customError is not defined
+2024-11-08 19:52:20 [info]: Listening on 8080
+2024-11-08 19:52:22 [error]: [GET] api/adoptions/:aid (adoptions.controller/getAdoption) | customError is not defined
+2024-11-08 19:53:30 [info]: Listening on 8080
+2024-11-08 19:53:32 [error]: [GET] api/adoptions/:aid (adoptions.controller/getAdoption) | Adoption id 672e8dd885dbc9884ed7276e not found
+2024-11-08 19:53:41 [info]: Listening on 8080
+2024-11-08 19:53:43 [error]: [GET] api/adoptions/:aid (adoptions.controller/getAdoption) | Adoption id 672e8dd885dbc9884ed7276e not found
+2024-11-08 19:54:24 [error]: [DELETE] api/adoptions/:adoptionId (adoptions.controller/deleteAdoption) | Adoption id undefined not found
+2024-11-08 19:54:59 [info]: Listening on 8080
+2024-11-08 19:55:05 [error]: [DELETE] api/adoptions/:adoptionId (adoptions.controller/deleteAdoption) | Adoption id undefined not found
+2024-11-08 19:55:21 [info]: Listening on 8080
+2024-11-08 19:55:23 [error]: [DELETE] api/adoptions/:adoptionId (adoptions.controller/deleteAdoption) | Adoption id undefined not found
+2024-11-08 19:55:36 [info]: Listening on 8080
+2024-11-08 19:55:46 [info]: Listening on 8080
+2024-11-08 19:55:47 [error]: [DELETE] api/adoptions/:adoptionId (adoptions.controller/deleteAdoption) | adoptionId is not defined
+2024-11-08 19:57:20 [info]: Listening on 8080
+2024-11-08 19:58:35 [info]: Listening on 8080
+2024-11-08 19:59:38 [info]: Listening on 8080
+2024-11-08 19:59:49 [info]: Listening on 8080
+2024-11-08 20:00:42 [info]: Listening on 8080
+2024-11-08 20:01:21 [info]: Listening on 8080
+2024-11-08 20:01:34 [info]: Listening on 8080
+2024-11-08 20:01:47 [error]: [DELETE] api/adoptions/:adoptionId (adoptions.controller/deleteAdoption) | this.adoptionsService.delete is not a function
+2024-11-08 20:02:08 [info]: Listening on 8080
+2024-11-08 20:10:57 [info]: Listening on 8080
+2024-11-08 20:18:23 [error]: [DELETE] api/adoptions/:adoptionId (adoptions.controller/deleteAdoption) | Adoption id 672e9a8a363d62b5f6ea2585 not found
+2024-11-08 20:18:52 [info]: Listening on 8080
+2024-11-08 20:20:55 [info]: Listening on 8080
+2024-11-08 20:21:52 [info]: Listening on 8080
+2024-11-08 20:24:42 [info]: Listening on 8080
+2024-11-08 20:28:03 [info]: Listening on 8080
+2024-11-08 20:28:50 [info]: Listening on 8080
+2024-11-08 20:35:54 [info]: Listening on 8080
+2024-11-08 20:35:55 [info]: Listening on 8080
+2024-11-08 20:52:31 [info]: Listening on 8080
+2024-11-08 20:53:01 [error]: [POST] api/adoptions/:uid/:pid (adoptions.controller/createAdoption) | payload is not defined
+2024-11-08 20:56:16 [info]: Listening on 8080
+2024-11-08 20:57:37 [info]: Listening on 8080

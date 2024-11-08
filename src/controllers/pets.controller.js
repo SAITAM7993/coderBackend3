@@ -39,7 +39,7 @@ export class PetsController {
       const petUpdateBody = req.body;
       const petId = req.params.pid;
       const result = await this.petService.update(petId, petUpdateBody);
-      res.send({ status: 'success', message: 'pet updated' });
+      res.send({ status: 'success', payload: result });
     } catch (error) {
       error.path = '[PUT] api/pets/:pid (pets.controller/updatePet)';
       next(error);

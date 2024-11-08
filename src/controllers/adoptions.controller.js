@@ -3,42 +3,6 @@ import { UserServices } from '../services/user.services.js';
 import { PetServices } from '../services/pet.services.js';
 import { AdoptionServices } from '../services/adoption.services.js';
 
-// const usersService = new UserServices();
-// const getAllAdoptions = async(req,res)=>{
-//     const result = await adoptionsService.getAll();
-//     res.send({status:"success",payload:result})
-// }
-
-// const getAdoption = async(req,res)=>{
-//     const adoptionId = req.params.aid;
-//     const adoption = await adoptionsService.getBy({_id:adoptionId})
-//     if(!adoption) return res.status(404).send({status:"error",error:"Adoption not found"})
-//     res.send({status:"success",payload:adoption})
-// }
-
-// const createAdoption = async(req,res)=>{
-//     const {uid,pid} = req.params;
-//     const user = await usersService.getUserById(uid);
-//     if(!user) return res.status(404).send({status:"error", error:"user Not found"});
-//     const pet = await petsService.getBy({_id:pid});
-//     if(!pet) return res.status(404).send({status:"error",error:"Pet not found"});
-//     if(pet.adopted) return res.status(400).send({status:"error",error:"Pet is already adopted"});
-//     user.pets.push(pet._id);
-//     await usersService.update(user._id,{pets:user.pets})
-//     await petsService.update(pet._id,{adopted:true,owner:user._id})
-//     await adoptionsService.create({owner:user._id,pet:pet._id})
-//     res.send({status:"success",message:"Pet adopted"})
-// }
-
-// export default {
-//     createAdoption,
-//     getAllAdoptions,
-//     getAdoption
-// }
-
-// const usersService = new UserServices();
-// const petsService = new UserServices();
-
 export class AdoptionsController {
   constructor() {
     this.adoptionsService = new AdoptionServices();
@@ -59,8 +23,8 @@ export class AdoptionsController {
 
   getAdoption = async (req, res, next) => {
     try {
-      const adoptionId = req.params.aid;
-      const adoption = await this.adoptionsService.getById(adoptionId);
+      const aid = req.params.aid;
+      const adoption = await this.adoptionsService.getById(aid);
       if (!adoption)
         return res
           .status(404)
@@ -69,6 +33,70 @@ export class AdoptionsController {
     } catch (error) {
       error.path =
         '[GET] api/adoptions/:aid (adoptions.controller/getAdoption)';
+      next(error);
+    }
+  };
+
+  deleteAdoption = async (req, res, next) => {
+    try {
+      const { aid } = req.params; // El único parámetro es el ID de la adopción
+      // Obtener los datos de la adopción
+      const adoption = await this.adoptionsService.getById(aid);
+      if (!adoption)
+        return res
+          .status(404)
+          .send({ status: 'error', error: 'Adoption not found' });
+
+      const { owner, pet } = adoption;
+
+      // Obtener al usuario
+      const user = await this.usersService.getById(owner);
+      if (!user)
+        return res
+          .status(404)
+          .send({ status: 'error', error: 'User not found' });
+
+      // Obtener la mascota
+      const petData = await this.petsService.getById(pet);
+      if (!petData)
+        return res
+          .status(404)
+          .send({ status: 'error', error: 'Pet not found' });
+
+      // Verificar que la mascota esté adoptada
+      if (!petData.adopted)
+        return res
+          .status(400)
+          .send({ status: 'error', error: 'Pet is not adopted' });
+
+      // Verificar que la mascota esté asociada con el usuario
+      if (petData.owner.toString() !== user._id.toString())
+        return res
+          .status(400)
+          .send({ status: 'error', error: 'Pet does not belong to this user' });
+
+      // Quitar la mascota del array de pets del usuario
+      console.log(user.pets.toString());
+      console.log(petData._id.toString());
+
+      user.pets = user.pets.filter((petId) => !petId.equals(petData._id)); //recontra importante esto, como es objectid no funcionaba el filtrado y quedaba con la mascota asignada
+
+      // Actualizar el usuario con el nuevo array de pets
+      await this.usersService.update(user._id, { pets: user.pets });
+
+      // Actualizar la mascota, ponerla como no adoptada y quitar el owner
+      await this.petsService.update(petData._id, {
+        adopted: false,
+        owner: null,
+      });
+
+      // Eliminar la adopción
+      await this.adoptionsService.remove(aid);
+
+      res.send({ status: 'success', message: 'Adoption removed successfully' });
+    } catch (error) {
+      error.path =
+        '[DELETE] api/adoptions/:adoptionId (adoptions.controller/deleteAdoption)';
       next(error);
     }
   };
@@ -96,8 +124,11 @@ export class AdoptionsController {
         adopted: true,
         owner: user._id,
       });
-      await this.adoptionsService.create({ owner: user._id, pet: pet._id });
-      res.send({ status: 'success', message: 'Pet adopted' });
+      const adoption = await this.adoptionsService.create({
+        owner: user._id,
+        pet: pet._id,
+      });
+      res.send({ status: 'success', payload: adoption });
     } catch (error) {
       error.path =
         '[POST] api/adoptions/:uid/:pid (adoptions.controller/createAdoption)';

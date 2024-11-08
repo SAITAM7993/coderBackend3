@@ -47,3 +47,35 @@
 2024-10-21 15:18:37 [error]: [GET] api/adoptions/:aid (adoptions.controller/getAdoption) | Parameter "filter" to findOne() must be an object, got "67169569068cbe728407bbe3" (type string)
 2024-10-21 15:20:42 [error]: [POST] api/users/:uid (users.controller/getUser) | User id 670bd4ccaf7b363b12578ec6 not found
 2024-10-21 15:21:22 [error]: [GET] api/adoptions/:aid (adoptions.controller/getAdoption) | Parameter "filter" to findOne() must be an object, got "67169569068cbe728407bbe3" (type string)
+2024-11-08 11:55:44 [error]: [POST] api/sessions/register (sessions.controller/register) | this.userServices.getUserByEmail is not a function
+2024-11-08 11:55:44 [error]: [POST] api/sessions/login (sessions.controller/login) | this.userServices.getUserByEmail is not a function
+2024-11-08 11:57:45 [error]: undefined | this.userServices.getByEmail is not a function
+2024-11-08 11:57:45 [error]: undefined | this.userServices.getByEmail is not a function
+2024-11-08 11:59:31 [error]: undefined | this.userServices.getByEmail is not a function
+2024-11-08 11:59:58 [error]: [POST] api/users/ (users.controller/createUser) | E11000 duplicate key error collection: entrega3.users index: email_1 dup key: { email: "mpa@nearbpo.com" }
+2024-11-08 12:00:49 [error]: undefined | this.userServices.getByEmail is not a function
+2024-11-08 12:02:04 [error]: undefined | this.userDao.getByEmail is not a function
+2024-11-08 13:39:25 [error]: [POST] api/users/ (users.controller/createUser) | E11000 duplicate key error collection: entrega3.users index: email_1 dup key: { email: "usertestmail@gmail.com" }
+2024-11-08 13:45:45 [error]: [POST] api/users/ (users.controller/createUser) | E11000 duplicate key error collection: entrega3.users index: email_1 dup key: { email: "usertestmail@gmail.com" }
+2024-11-08 13:46:38 [error]: [POST] api/users/ (users.controller/createUser) | E11000 duplicate key error collection: entrega3.users index: email_1 dup key: { email: "usertestmail@gmail.com" }
+2024-11-08 13:46:51 [error]: [POST] api/users/ (users.controller/createUser) | E11000 duplicate key error collection: entrega3.users index: email_1 dup key: { email: "usertestmail@gmail.com" }
+2024-11-08 13:57:05 [error]: [POST] api/users/ (users.controller/createUser) | E11000 duplicate key error collection: entrega3.users index: email_1 dup key: { email: "usertestmail@gmail.com" }
+2024-11-08 13:57:57 [error]: [POST] api/users/ (users.controller/createUser) | E11000 duplicate key error collection: entrega3.users index: email_1 dup key: { email: "usertestmail@gmail.com" }
+2024-11-08 19:34:58 [error]: [DELETE] api/adoptions/:adoptionId (adoptions.controller/deleteAdoption) | customError is not defined
+2024-11-08 19:38:47 [error]: [DELETE] api/adoptions/:adoptionId (adoptions.controller/deleteAdoption) | customError is not defined
+2024-11-08 19:41:34 [error]: [GET] api/adoptions/:aid (adoptions.controller/getAdoption) | customError is not defined
+2024-11-08 19:49:09 [error]: [GET] api/adoptions/:aid (adoptions.controller/getAdoption) | customError is not defined
+2024-11-08 19:51:33 [error]: [GET] api/adoptions/:aid (adoptions.controller/getAdoption) | customError is not defined
+2024-11-08 19:51:49 [error]: [GET] api/adoptions/:aid (adoptions.controller/getAdoption) | customError is not defined
+2024-11-08 19:51:52 [error]: [GET] api/adoptions/:aid (adoptions.controller/getAdoption) | customError is not defined
+2024-11-08 19:51:54 [error]: [GET] api/adoptions/:aid (adoptions.controller/getAdoption) | customError is not defined
+2024-11-08 19:52:22 [error]: [GET] api/adoptions/:aid (adoptions.controller/getAdoption) | customError is not defined
+2024-11-08 19:53:32 [error]: [GET] api/adoptions/:aid (adoptions.controller/getAdoption) | Adoption id 672e8dd885dbc9884ed7276e not found
+2024-11-08 19:53:43 [error]: [GET] api/adoptions/:aid (adoptions.controller/getAdoption) | Adoption id 672e8dd885dbc9884ed7276e not found
+2024-11-08 19:54:24 [error]: [DELETE] api/adoptions/:adoptionId (adoptions.controller/deleteAdoption) | Adoption id undefined not found
+2024-11-08 19:55:05 [error]: [DELETE] api/adoptions/:adoptionId (adoptions.controller/deleteAdoption) | Adoption id undefined not found
+2024-11-08 19:55:23 [error]: [DELETE] api/adoptions/:adoptionId (adoptions.controller/deleteAdoption) | Adoption id undefined not found
+2024-11-08 19:55:47 [error]: [DELETE] api/adoptions/:adoptionId (adoptions.controller/deleteAdoption) | adoptionId is not defined
+2024-11-08 20:01:47 [error]: [DELETE] api/adoptions/:adoptionId (adoptions.controller/deleteAdoption) | this.adoptionsService.delete is not a function
+2024-11-08 20:18:23 [error]: [DELETE] api/adoptions/:adoptionId (adoptions.controller/deleteAdoption) | Adoption id 672e9a8a363d62b5f6ea2585 not found
+2024-11-08 20:53:01 [error]: [POST] api/adoptions/:uid/:pid (adoptions.controller/createAdoption) | payload is not defined

@@ -70,7 +70,7 @@ export class UserControllers {
           .send({ status: 'error', error: 'User not found' });
 
       const result = await this.userServices.update(userId, updateBody);
-      res.send({ status: 'success', message: 'User updated' });
+      res.send({ status: 'success', payload: result });
     } catch (error) {
       error.path = '[PUT] api/users/:uid (users.controller/updateUser) ';
       next(error);

@@ -1,40 +1,10 @@
 import { expect } from 'chai';
 import supertest from 'supertest';
-import express from 'express';
-
-/*INICIO CODIGO PARA QUE FUNCIONE, NO SE POR QUE NO ANDA SIN ESTO y en los tests de dao si*/
-import petsRouter from '../../src/routes/pets.router.js';
-
-const PORT = process.env.PORT || 8080;
-let server;
-const app = express();
-app.use(express.json());
-app.use('/api/pets', petsRouter);
-
-/*FIN */
-import {
-  connectMongoDB,
-  disconnectMongoDB,
-} from '../../src/config/mongoDB.config.js'; //para conectar a mongo parametrizado
 
 const request = supertest('http://localhost:8080/api/pets'); //url a donde vamos a hacer la peticion - como si lo hicieramos desde postman
 
-describe('Test de integración Pets', () => {
+describe('Test de integracion [PETS]', () => {
   let testPet;
-  // Método que se ejecuta antes de todos los tests
-  before(async () => {
-    await connectMongoDB(); //conecto con mongo
-    console.log('--- INICIO de tests integracion [PETS]');
-    server = app.listen(PORT); //tengo que inicializar con esto para que funcione
-  });
-
-  after(async () => {
-    await disconnectMongoDB(); //conecto con mongo
-    server.close(); // Cierra el servidor
-    console.log('--- FIN de tests integracion [PETS]');
-  });
-
-  //let testPet;
   it('[GET] /api/pets - Debe devolver un array de mascotas', async () => {
     const { status, body } = await request.get('/');
     expect(status).to.be.equal(200);
@@ -60,7 +30,6 @@ describe('Test de integración Pets', () => {
     const newPet = {
       specie: 'Perro',
     };
-    console.log(testPet._id);
     const { status, body } = await request.put(`/${testPet._id}`).send(newPet);
 
     expect(status).to.be.equal(200);
@@ -72,7 +41,6 @@ describe('Test de integración Pets', () => {
 
   it('[DELETE] /api/pets/:pid - Debe eliminar una mascota', async () => {
     const { status, body } = await request.delete(`/${testPet._id}`);
-
     expect(status).to.be.equal(200);
     expect(body.message).to.be.equal('pet deleted');
   });

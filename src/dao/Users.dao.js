@@ -9,6 +9,10 @@ export default class Users {
     return userModel.findById(params);
   };
 
+  getByEmail = (email) => {
+    return userModel.findOne({ email });
+  };
+
   save = (doc) => {
     return userModel.create(doc);
   };
