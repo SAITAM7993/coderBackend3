@@ -1,0 +1,2 @@
+descargar imagen de docker: docker pull matiassanguinet/adoption:1.0.0
+para ejecutar applicacion se debe cargar un .env con variables MONGO_URL y PORT

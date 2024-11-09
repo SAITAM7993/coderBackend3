@@ -1,4 +1,6 @@
 import Adoption from '../../src/dao/Adoption.js';
+import Users from '../../src/dao/Users.dao.js';
+import Pet from '../../src/dao/Pets.dao.js';
 import { expect } from 'chai';
 import supertest from 'supertest';
 import {
@@ -9,6 +11,18 @@ import {
 const userRequest = supertest('http://localhost:8080/api/users');
 const petRequest = supertest('http://localhost:8080/api/pets');
 
+const { status: statusUser, body: bodyUser } = await userRequest.get('/');
+const firstUser = bodyUser.payload[0];
+
+const { status: statusPets, body: bodyPets } = await petRequest.get('/');
+
+const firstUnadoptedPet = bodyPets.payload.find((pet) => pet.adopted === false);
+
+const newAdoption = {
+  owner: `${firstUser._id}`,
+  pet: `${firstUnadoptedPet._id}`,
+};
+
 // Describir nuestro test
 describe('Test unitario [AdoptionDao]', () => {
   //   Método que se ejecuta antes de todos los tests
@@ -17,6 +31,8 @@ describe('Test unitario [AdoptionDao]', () => {
     connectMongoDB(); //conecto con mongo
   });
   const adoptionDao = new Adoption();
+  const userDao = new Users();
+  const petDao = new Pet();
 
   it('Debe retornar todas las adopciones', async () => {
     const users = await adoptionDao.get();
@@ -25,20 +41,6 @@ describe('Test unitario [AdoptionDao]', () => {
   });
 
   it('Debe crear y retornar una adopcion', async () => {
-    const { status: statusUser, body: bodyUser } = await userRequest.get('/');
-    const firstUser = bodyUser.payload[0];
-
-    const { status: statusPets, body: bodyPets } = await petRequest.get('/');
-
-    const firstUnadoptedPet = bodyPets.payload.find(
-      (pet) => pet.adopted === false
-    );
-
-    const newAdoption = {
-      owner: `${firstUser._id}`,
-      pet: `${firstUnadoptedPet._id}`,
-    };
-
     const adotpion = await adoptionDao.save(newAdoption);
 
     adoptionTest = adotpion;
@@ -63,6 +65,10 @@ describe('Test unitario [AdoptionDao]', () => {
   it('Debe eliminar una adopcion', async () => {
     await adoptionDao.delete(adoptionTest._id);
     const adoption = await adoptionDao.getBy(adoptionTest._id);
-    expect(adoption).to.be.null;
+    const user = await userDao.getBy(firstUser._id);
+    const pet = await petDao.getBy(firstUnadoptedPet._id);
+    expect(pet.adopted).to.be.false; //deberia dejar como no adoptada
+    expect(user.pets).to.be.empty; //deberia dejar al usuario sin pet
+    expect(adoption).to.be.null; //no deberia exister la adopcion
   });
 });

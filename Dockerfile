@@ -1,5 +1,5 @@
 # Definimos una imagen base de node y su versión para nuestro contenedor
-FROM node
+FROM node:20
 
 # Definimos el directorio de trabajo dentro del contenedor 
 WORKDIR /app
@@ -8,8 +8,9 @@ WORKDIR /app
 COPY package.json .
 
 # Instalamos las dependencias del proyecto
-RUN npm install
-RUN npm install bcryptjs 
+
+RUN npm cache clean --force && npm install --verbose
+RUN npm install bcryptjs
 # RUN npm install dotenv
 # RUN npm install winston
 # RUN npm install cookieparser
@@ -35,4 +36,4 @@ CMD ["npm", "start"]
 # Una vez que la imagen se haya construido, podemos correr un contenedor a partir de ella
 # Para esto, debemos ejecutar el siguiente comando en la terminal:
 # docker run -p 8080:8080 nombre-de-la-imagen (reemplazar nombre-de-la-imagen por el nombre que le diste a tu imagen)
-# docker run -p 8080:8080 app-adoption 
+# docker run -p 8080:8080 app-adoption , ej docker run -p 3000:8080 app-adoption

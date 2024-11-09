@@ -1,6 +1,5 @@
 // import { customError } from '../errors/custom.error.js';
 // import { generateUsersMock } from '../mocks/user.mock.js';
-import UserDTO from '../dto/uSER.dto.js';
 import { createHash } from '../utils/index.js';
 import { UserServices } from '../services/user.services.js';
 
