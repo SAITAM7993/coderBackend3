@@ -156,7 +156,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/users/670bd4ccaf7b363b12578ec6",
+							"raw": "http://localhost:8080/api/users/672e2bb0e30c280c0a443336",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -165,7 +165,7 @@
 							"path": [
 								"api",
 								"users",
-								"670bd4ccaf7b363b12578ec6"
+								"672e2bb0e30c280c0a443336"
 							]
 						}
 					},
@@ -178,7 +178,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"first_name\": \"matias\",\r\n  \"last_name\": \"prueba\",\r\n  \"email\": \"mpa@nearbpo.com\",\r\n  \"password\": \"pass123\",\r\n  \"role\": \"user\",\r\n  \"pets\": []\r\n  \r\n}",
+							"raw": "{\r\n    \"first_name\": \"matias\",\r\n  \"last_name\": \"prueba\",\r\n  \"email\": \"mpaA@nearbpo.com\",\r\n  \"password\": \"pass123\",\r\n  \"role\": \"user\",\r\n  \"pets\": []\r\n  \r\n}\r\n\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -205,7 +205,48 @@
 		},
 		{
 			"name": "pets",
-			"item": []
+			"item": [
+				{
+					"name": "getPets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/pets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPets Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/pets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pets"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "adoptions",
@@ -236,7 +277,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/adoptions/67169569068cbe728407bbe3",
+							"raw": "http://localhost:8080/api/adoptions/672e8dd885dbc9884ed7276e",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -245,7 +286,7 @@
 							"path": [
 								"api",
 								"adoptions",
-								"67169569068cbe728407bbe3"
+								"672e8dd885dbc9884ed7276e"
 							]
 						}
 					},
@@ -268,6 +309,34 @@
 								"adoptions",
 								"670bd4ccaf7b363b12578ec7",
 								"670bd4fcaf7b363b12578efc"
+							],
+							"query": [
+								{
+									"key": "uid",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAdoption",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/adoptions/672eb78b57aaaf92442d7977",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"adoptions",
+								"672eb78b57aaaf92442d7977"
 							],
 							"query": [
 								{
