@@ -26,8 +26,15 @@ describe('Test integracion de [ADOPTIONS]', () => {
     const { status, body } = await adoptionRequest.post(
       `/${firstUser._id}/${firstUnadoptedPet._id}`
     );
+
     adoptionTest = body.payload;
     expect(status).to.be.equal(200);
+  });
+
+  it('[GET] /api/adoptions - Debe obtener una odopcion', async () => {
+    const { status, body } = await adoptionRequest.get(`/${adoptionTest._id}`);
+    expect(status).to.be.equal(200);
+    expect(body.payload).to.be.an('object');
   });
 
   it('[DELETE] /api/adoptions - Debe eliminar una adopcion', async () => {

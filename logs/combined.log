@@ -318,3 +318,8 @@
 2024-11-08 20:53:01 [error]: [POST] api/adoptions/:uid/:pid (adoptions.controller/createAdoption) | payload is not defined
 2024-11-08 20:56:16 [info]: Listening on 8080
 2024-11-08 20:57:37 [info]: Listening on 8080
+2024-11-08 21:14:33 [info]: Listening on 8080
+2024-11-08 21:21:40 [info]: Listening on 8080
+2024-11-08 21:36:39 [info]: Listening on 8080
+2024-11-08 21:36:40 [info]: Listening on 8080
+2024-11-08 22:04:01 [info]: Listening on 8080
