@@ -76,8 +76,6 @@ export class AdoptionsController {
           .send({ status: 'error', error: 'Pet does not belong to this user' });
 
       // Quitar la mascota del array de pets del usuario
-      console.log(user.pets.toString());
-      console.log(petData._id.toString());
 
       user.pets = user.pets.filter((petId) => !petId.equals(petData._id)); //recontra importante esto, como es objectid no funcionaba el filtrado y quedaba con la mascota asignada
 
