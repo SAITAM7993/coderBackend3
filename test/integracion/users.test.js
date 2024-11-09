@@ -3,7 +3,7 @@ import supertest from 'supertest';
 
 const userRequest = supertest('http://localhost:8080/api/users');
 
-describe('Test integracion de [USERS]', () => {
+describe('Test integracion [USERS]', () => {
   let userTest;
   it('[GET] /api/users - Debe obtener todos los usuarios', async () => {
     const { status, body } = await userRequest.get('/');

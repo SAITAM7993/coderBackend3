@@ -9,9 +9,9 @@ import {
 // Describir nuestro test
 describe('Test unitario [PetDao]', () => {
   //   Método que se ejecuta antes de todos los tests
-  before(() => {
-    connectMongoDB(); //conecto con mongo
-  });
+  // before(() => {
+  //   connectMongoDB(); //conecto con mongo
+  // });
 
   // after(() => {
   //   disconnectMongoDB();

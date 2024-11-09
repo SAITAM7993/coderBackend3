@@ -5,7 +5,7 @@ const adoptionRequest = supertest('http://localhost:8080/api/adoptions');
 const userRequest = supertest('http://localhost:8080/api/users');
 const petRequest = supertest('http://localhost:8080/api/pets');
 
-describe('Test integracion de [ADOPTIONS]', () => {
+describe('Test integracion [ADOPTIONS]', () => {
   let adoptionTest;
   it('[GET] /api/adoptions - Debe obtener todas las odopciones', async () => {
     const { status, body } = await adoptionRequest.get('/');

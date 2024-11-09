@@ -93,7 +93,7 @@ describe('Test unitario [UserDao]', () => {
 
   // Método que se ejecuta al finalizar todos los test
   after(() => {
-    // console.log('Tests finalizados');
+    console.log('*****Tests finalizados******');
     disconnectMongoDB();
   });
 });

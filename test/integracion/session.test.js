@@ -4,7 +4,7 @@ import supertest from 'supertest';
 const request = supertest('http://localhost:8080/api/sessions');
 const userRequest = supertest('http://localhost:8080/api/users');
 
-describe('Test integracion de [SESSIONS]', () => {
+describe('Test integracion [SESSIONS]', () => {
   let userTest;
   it('[POST] /api/sessions/register - Debe registrar un usuario', async () => {
     const newUser = {
